@@ -33,9 +33,9 @@ main {
 .divdireita img {
     width: 200px;
     height: 400px;
-    border-radius: 0%;
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15); /* Sombra branca para o avatar */
+  
 }
 
 h1.blue {
@@ -94,7 +94,7 @@ footer {
     .divdireita img {
         width: 120px;
         height: 120px;
-        border-radius:50%;
+    
     }
 
     a {
