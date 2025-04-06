@@ -34,7 +34,7 @@ main {
 .divdireita img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 0%;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15); /* Sombra branca para o avatar */
 }
