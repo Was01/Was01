@@ -11,9 +11,8 @@ main {
     max-width: 800px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #111; /* Fundo ligeiramente mais claro para o conteúdo principal */
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Sombra branca sutil */
-    border-radius: 8px;
+    background-color: #000; /* Fundo preto */
+   
 }
 
 .divprincipal {
@@ -95,6 +94,7 @@ footer {
     .divdireita img {
         width: 120px;
         height: 120px;
+        border-radius:50%;
     }
 
     a {
