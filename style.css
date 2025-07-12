@@ -1,117 +1,189 @@
-
-
-
+/* Reset básico e estilos gerais */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    line-height: 1.6;
-}
-
-main {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #000;
-}
-
-.divprincipal {
-    display: flex;
-    align-items: center;
-}
-
-.divesquerda {
-    flex: 2;
-    padding-right: 30px;
-}
-
-.divdireita {
-    flex: 1;
-    text-align: center;
-}
-
-.divdireita img {
-    width: 200px;
-    height: 400px;
-    border-radius:20%;
-    object-fit: cover;
-    
-}
-
-h1.blue {
-    color: #007bff;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    font-weight: 600;
-}
-
-.divesquerda p {
-    margin-bottom: 25px;
-    font-size: 1.1em;
-    text-align:justify;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove margem padrão do body */
+    padding: 20px; /* Adiciona um padding geral para não colar nas bordas */
+    color: #333; /* Cor de texto padrão */
+      line-height: 1.6; /* Melhora a legibilidade do texto */
   
 }
 
-a {
-    display: inline-block;
-    padding: 12px 25px;
-    margin-right: 15px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+/* Removendo a margem do seletor universal para evitar problemas com layout */
+/* Preferimos aplicar margens ou padding específicos onde necessário */
+
+img {
+    width: 200px; /* Reduzindo um pouco o tamanho padrão da imagem para melhor visualização em mobile */
+    height: 200px;
+    border-radius: 50%; /* Mantém a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    border: 3px solid #00468c; /* Adiciona uma borda */
 }
 
-a:hover {
-    background-color: #0056b3;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza o texto dentro do header */
+    padding: 20px 15px; /* Adiciona padding interno, com mais nas laterais */
+    background-color: #fff; /* Fundo branco para o cabeçalho */
+  
+    border-radius: 10px;
+    margin-bottom: 30px; /* Espaço abaixo do header */
+}
+
+h1 {
+    color: #00468c;
+    font-size: 2.2em; /* Usando 'em' para tamanhos de fonte relativos */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color:  #00468c;
+    font-weight: 900;
+    font-size: 1.6em; /* Usando 'em' para tamanhos de fonte relativos */
+    margin-bottom: 20px;
+}
+
+p {
+    color: gray; /* Cor de texto mais neutra para os parágrafos */
+    font-size: 1.1em; /* Usando 'em' */
+    font-weight: normal; /* Removendo negrito excessivo */
+    text-align: center; /* Centraliza o texto */
+    max-width: 700px; /* Limita a largura do parágrafo para melhor leitura */
+    margin: 0 auto 15px auto; /* Centraliza o parágrafo e adiciona margem inferior */
+    padding: 0 10px; /* Padding interno para o texto não colar nas bordas em telas pequenas */
+}
+
+.paragrafo {
+    padding: 15px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    margin: 10px auto; /* Centraliza e adiciona margem entre eles */
+    max-width: 400px; /* Limita a largura das habilidades para melhor visualização */
+    text-align: center; /* Centraliza o texto das habilidades */
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    color: #666;
+    padding: 20px;
+    background-color: #00468c;
+    color: white;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    color: #e3b482; /* Cor do título do rodapé */
+    margin-bottom: 20px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column; /* Links em coluna no mobile */
+    justify-content: center; /* Centraliza os links quando em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 15px; /* Espaçamento entre os links */
+    margin-bottom: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px; /* Aumenta o padding para melhor área de clique */
+    background: gray; /* Cor de fundo do botão */
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Transição suave para o hover */
+    display: block; /* Garante que os links se comportem como blocos para o padding/margin */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+a:hover {
+    background: #00468c; /* Inverte as cores no hover */
+  
+}
+
+footer p {
+    color: #f7ede2; /* Cor para o texto de copyright */
     font-size: 0.9em;
+    margin-top: 20px;
 }
 
-/* Media Queries para Responsividade */
+/* --- Media Queries --- */
 
-@media (max-width: 768px) {
-    .divprincipal {
-        flex-direction: column;
-        align-items: center;
+/* Para Telas Médias (Tablets, acima de 768px) */
+@media (min-width: 768px) {
+    body {
+        padding: 30px; /* Mais padding geral em telas maiores */
     }
 
-    .divesquerda, .divdireita {
-        width: 100%;
-        padding-right: 0;
-        text-align: center;
+    img {
+        width: 250px; /* Aumenta um pouco a imagem em tablets */
+        height: 250px;
     }
 
-    .divdireita {
-        margin-top: 30px;
+    header {
+        padding: 40px 30px; /* Mais padding no header */
     }
 
-    .divdireita img {
-        width: 120px;
-        height: 120px;
+    h1 {
+        font-size: 2.8em; /* Aumenta o título principal */
     }
 
-    a {
-        margin: 10px 5px;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1.blue {
-        font-size: 2em;
+    h2 {
+        font-size: 1.8em; /* Aumenta o subtítulo */
     }
 
     p {
-        font-size: 1em;
+        font-size: 1.2em; /* Aumenta um pouco o texto do parágrafo */
+        max-width: 800px; /* Permite que o texto se espalhe mais */
+    }
+
+    .paragrafo {
+        max-width: 500px; /* Aumenta a largura das habilidades */
+    }
+
+    footer div {
+        flex-direction: row; /* Links em linha no rodapé */
+        gap: 25px; /* Espaçamento maior entre os links */
+    }
+
+    a {
+        width: auto; /* Deixa o link ter a largura natural do conteúdo */
+    }
+}
+
+/* Para Telas Grandes (Desktops, acima de 1024px) */
+@media (min-width: 1024px) {
+    body {
+        padding: 40px;
+    }
+
+    img {
+        width: 300px; /* Volta ao tamanho original da imagem para desktops */
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 3.5em; /* Aumenta ainda mais o título */
+    }
+
+    h2 {
+        font-size: 2.2em; /* Aumenta o subtítulo */
+    }
+
+    p {
+        font-size: 1.3em;
+        max-width: 900px; /* Máxima largura para o texto principal */
+    }
+
+    .paragrafo {
+        max-width: 600px; /* Habilidades podem ser um pouco mais largas */
+        padding: 20px; /* Mais padding interno */
+    }
+
+    footer div {
+        gap: 40px; /* Mais espaço entre os links no desktop */
     }
 }
