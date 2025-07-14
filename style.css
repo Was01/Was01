@@ -11,12 +11,11 @@ body {
 /* Removendo a margem do seletor universal para evitar problemas com layout */
 /* Preferimos aplicar margens ou padding específicos onde necessário */
 
-img {
-    width: 200px; /* Reduzindo um pouco o tamanho padrão da imagem para melhor visualização em mobile */
-    height: 200px;
+video {
+    width: 300px; /* Reduzindo um pouco o tamanho padrão da imagem para melhor visualização em mobile */
+    height: 300px;
     border-radius: 50%; /* Mantém a imagem redonda */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    margin-bottom: 20px; /* Espaço abaixo da imagem */
+      margin-bottom: 20px; /* Espaço abaixo da imagem */
     border: 3px solid #00468c; /* Adiciona uma borda */
 }
 
@@ -118,9 +117,9 @@ footer p {
         padding: 30px; /* Mais padding geral em telas maiores */
     }
 
-    img {
-        width: 250px; /* Aumenta um pouco a imagem em tablets */
-        height: 250px;
+    video {
+        width: 350px; /* Aumenta um pouco a imagem em tablets */
+        height: 350px;
     }
 
     header {
